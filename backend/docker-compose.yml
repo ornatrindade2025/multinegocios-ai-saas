@@ -1,0 +1,29 @@
+services:
+  api:
+    build: .
+    container_name: multinegocios_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+    command: uv run uvicorn main:app --host 0.0.0.0 --port 8000
+
+  db:
+    image: postgres:16
+    container_name: multinegocios_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: multinegocios
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

@@ -1,0 +1,22 @@
+[project]
+name = "multinegocios-ai"
+version = "0.1.0"
+description = "SaaS multi-tenant para processamento de mensagens WhatsApp com CrewAI"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlalchemy>=2.0",
+    "asyncpg",
+    "pydantic>=2.0",
+    "pydantic-settings",
+    "python-jose",
+    "alembic",
+    "crewai",
+    "python-dotenv"
+]
+
+[dependency-groups]
+dev = []
+
