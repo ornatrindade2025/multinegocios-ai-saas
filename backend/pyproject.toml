@@ -11,10 +11,10 @@ dependencies = [
     "asyncpg",
     "pydantic>=2.0",
     "pydantic-settings",
-    "python-jose",
+    "python-jose[cryptography]",
     "alembic",
     "crewai",
-    "python-dotenv"
+    "python-dotenv",
 ]
 
 [dependency-groups]
