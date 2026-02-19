@@ -15,6 +15,7 @@ dependencies = [
     "alembic",
     "crewai",
     "python-dotenv",
+    "cryptography>=46.0.5",
 ]
 
 [dependency-groups]
