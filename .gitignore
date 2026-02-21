@@ -1,0 +1,31 @@
+# --- Python & Ambientes ---
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Configurações Locais (Segurança) ---
+.env
+.env.local
+.env.secret
+
+# --- Gerenciadores de Pacotes ---
+.python-version
+# O uv.lock deve ser mantido no Git, mas se o Antigravity 
+# travar nele, você pode testar ignorá-lo temporariamente.
+
+# --- Banco de Dados e Migrações ---
+*.db
+*.sqlite3
+
+# --- Docker ---
+.docker/
+
+# --- IDEs e Editores ---
+.vscode/
+.idea/
+*.swp
+*.swo
